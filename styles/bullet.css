@@ -1,0 +1,16 @@
+/* СТИЛИ ПУЛЬ */
+.bullet{
+    position: absolute;
+    width: 10px;
+    height: 40px;
+    background-color: greenyellow;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    z-index: 11;
+}
+.enemy-bullet{
+    width: 1px;
+    height: 30px;
+    background-color: red;
+}

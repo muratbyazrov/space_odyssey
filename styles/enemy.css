@@ -1,0 +1,20 @@
+/* СТИЛИ ПРОТИВНИКА */
+.enemy{
+    position: absolute;
+    width: 4%;
+    height: 4%;
+    /* background-color: yellow; */
+    background-image: url('../images/enemyready.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 11;
+}
+
+
+/* СТИЛИ ПРИ ВЗРЫВЕ */
+.bumb{
+    background-image: url('../images/bumb.gif');
+    width: 20%;
+    height: 20%;
+}

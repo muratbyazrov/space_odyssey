@@ -1,0 +1,31 @@
+/* Стили начального экрана и экрана победы */
+.info-window{
+    background-color: black;
+    color: whitesmoke;
+    font-family: Chopsic;
+    position: fixed;
+    width: 30%;
+    max-height: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 12;
+    border: white solid;
+}
+.info-window_none{
+    display: none;
+}
+.info-window__title{
+    text-align: center;
+}
+.info-window__subtitle{
+    font-size: x-large;
+}
+.info-window__start{
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    border: white solid;
+}

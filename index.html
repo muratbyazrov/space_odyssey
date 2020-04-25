@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SPASE ODYSSEY</title>
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+
+<body class="body">
+    <div class="main-window">
+        <div class="user-box"></div>
+    </div>
+
+    <div class="game-menu">
+        <div class="menu__block">
+            <h2 class="menu__title">Уничтожено</h2>
+            <p class='menu__count destroyed'>0</p>
+        </div>
+
+        <div class="menu__block">
+            <h2 class="menu__title">Упуcтил</h2>
+            <p class='menu__count missing'>0</p>
+        </div>
+
+        <div class="menu__block">
+            <h2 class="menu__title">Здоровье</h2>
+            <p class='menu__count health'></p>
+        </div>
+
+        <div class="menu__block menu__block_mode">
+            <h2 class="menu__title">Настроение</h2>
+            <div class="menu__block_mood">
+                <img class="menu__image cool" src="./images/icons/cool1.png">
+                <img class="menu__image angry" src="./images/icons/angr2.png">
+                <img class="menu__image spacex" src="./images/icons/sps3.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="info-window">
+        <h1 class="info-window__title">SPASE ODYSSEY</h1>
+        <p class="info-window__subtitle"> 
+Ship control:
+            <ul>
+                <li>Left/Right: ←  →  or A/D</li>
+                <li>Fire: whitespace or Enter</li>
+                <li>Start the game again: F5</li>
+                <li>Developer: Murat Byazrov</li>
+            </ul>
+        </p>
+        <p class="info-window__start">press enter to START</p>
+    </div>
+
+    <script src="./index.js"></script>
+    <script src="./bullet.js"></script>
+    <script src="./enemy.js"></script>
+    <script src="./speed.js"></script>
+    <script src="./menu.js"></script>
+    <script src="./sounds.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+/* КОСМИЧЕСКИЕ ОБЪЕКТЫ */
+.space-obj {
+    width: 10%;
+    height: 25%;
+    background-image: url('../images/spaceobject.png');
+    /* background-color: red; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    z-index: 0;
+}
+
+.space-obj_one{
+    background-image: url('../images/spaceobject.png');
+}
+
+.space-obj_two{
+    background-image: url('../images/spaceobject2.png');
+}
+
+.space-obj_three{
+    background-image: url('../images/spaceobject3.png');
+}
+
+.space-obj_four{
+    background-image: url('../images/spaceobject4.png');
+}
+.space-obj_five{
+    background-image: url('../images/spaceobject5.png');
+}
+.space-obj_six{
+    background-image: url('../images/spaceobject6.png');
+}
+.space-obj_seven{
+    background-image: url('../images/spaceobject7.png');
+}
+.space-obj_eight{
+    background-image: url('../images/spaceobject8.png');
+}
+.space-obj_nine{
+    background-image: url('../images/spaceobject9.png');
+}

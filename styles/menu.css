@@ -1,0 +1,65 @@
+/* СТИЛИ ПАНЕЛИ УПРАВЛЕНИЯ */
+.game-menu{
+    width: 150px;
+    height: 85%;
+    position: absolute;
+    right: 2%;
+    top: 5%;
+    display: flex;
+    flex-direction: column;
+    color: cornsilk;
+    z-index: 11;
+    opacity: 0.2;
+}
+.game-menu_end{
+    font-size: larger;
+    width: 30%;
+    height: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 12;
+    border: white solid;
+}
+
+
+.menu__block{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 5px;
+    width: 95%;
+}
+
+.menu__title{
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    max-width: 95;
+}
+.menu__count{
+    font-size: 50px;
+    margin: auto;
+}
+.menu__block_mood{
+    width: 100%;
+    margin: 10px auto;
+    display: flex;
+}
+.menu__image{
+    width: 45px;
+    margin: 2px;
+    background-color: cornsilk;
+    border-radius: 50%;
+    margin: auto;
+}
+.menu__image:hover{
+    background-color: yellow;
+}
+.play{
+    background-color: yellow;
+    animation: radial-pulse 1s infinite;
+}
+
