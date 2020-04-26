@@ -5,6 +5,16 @@ const counter = document.querySelector('.counter');
 const w = gameField.offsetWidth;
 const h = gameField.offsetHeight;
 
+/* ДЛЯ МЕНЮ */
+const gameMenu = document.querySelector('.game-menu');
+//чтобы скрыть
+const menuMode = document.querySelector('.menu__block_mode');
+const destroyed = document.querySelector('.destroyed');
+const missing = document.querySelector('.missing');
+const health = document.querySelector('.health');
+const infoWin = document.querySelector('.info-window');
+const START = document.querySelector('.info-window__start');
+
 //создадим генератор случайных чисел
 function random(min, max) {
     return Math.round(Math.random() * (max - min) + min);
@@ -150,8 +160,10 @@ function start(event) {
     if(event.keyCode == 13 && !START.classList.contains('yesStart')){
         //это нужно, чтобы запустить таймеры только один раз
         START.classList.add('yesStart');
-        //скрое начаьную страницу
+        //скроем начаьную страницу
         infoWin.classList.add('info-window_none');
+        //вернем музыку в боковое меню
+        gameMenu.appendChild(menuMode);
         //уберём прозрачность у игрового поля и меню
         gameField.classList.add('game-start');
         gameMenu.classList.add('game-start');
@@ -162,9 +174,16 @@ function start(event) {
     }
 }
 
+//добавим музыку на старотовое окно
+function addMusicOnStartWindow() {
+    infoWin.appendChild(menuMode)
+}
+addMusicOnStartWindow();
+
 //Обработчик нажатия на клавиши
 document.addEventListener('keydown', smoothly);
 
+document.addEventListener('keydown', start);
 
 
 
