@@ -14,7 +14,10 @@ const missing = document.querySelector('.missing');
 const health = document.querySelector('.health');
 const infoWin = document.querySelector('.info-window');
 const START = document.querySelector('.info-window__start');
-
+/* Управление для сенсорных телефонов */
+const sLeft = document.querySelector('.control__button_left');
+const sRight = document.querySelector('.control__button_right');
+const sFire = document.querySelector('.control__button_fire');
 //создадим генератор случайных чисел
 function random(min, max) {
     return Math.round(Math.random() * (max - min) + min);
@@ -100,44 +103,6 @@ function stopTime(intervalName, sec) {
     }, sec*1000);
 }
 
-
-//Манупулятор юзерской коробкой
-let left = userBox.offsetLeft;
-function controller(keyCode, steping) {
-    if ((keyCode == 37||keyCode == 65) && left >= 0) {
-        left = left - steping;
-        userBox.style.left = `${left}px`;
-        //userBox.classList.add('user-box-left');
-    } else if ((keyCode == 39|| keyCode == 68) && left < gameField.offsetWidth - userBox.offsetWidth) {
-        left = left + steping;
-        userBox.style.left = `${left}px`;
-        //userBox.classList.add('user-box-right');
-    }
-}
-
-//функция плавного движения
-function smoothly() {
-    let keyCode = event.keyCode;
-    let interval
-    if (!event.repeat) {
-        interval = setInterval(() => {
-            //вычислим шаг передвижение пользователя относитеьгно ширинв экрана
-            controller(keyCode, w/800);
-        }, 1);
-    }
-    if(event.repeat){
-        interval = setInterval(() => {
-            controller(keyCode, 0.4);
-        }, 1);
-    }
-    setTimeout(() => {
-        clearInterval(interval)
-        userBox.classList.remove('user-box-left');
-        userBox.classList.remove('user-box-right')
-    }, 350);
-}
-
-
 //функция, которая уничтожает пользователя после н-ого количества поподаний
 let bombArr = [];
 function killUser(bullet) {
@@ -157,7 +122,7 @@ function killUser(bullet) {
 let enemyMainInt;
 let spaceObjMainInt;
 function start(event) {
-    if(event.keyCode == 13 && !START.classList.contains('yesStart')){
+    if(event.keyCode == 13 && !START.classList.contains('yesStart')||event.target.classList.contains('control__button_fire')){
         //это нужно, чтобы запустить таймеры только один раз
         START.classList.add('yesStart');
         //скроем начаьную страницу
@@ -180,10 +145,9 @@ function addMusicOnStartWindow() {
 }
 addMusicOnStartWindow();
 
-//Обработчик нажатия на клавиши
-document.addEventListener('keydown', smoothly);
 
 document.addEventListener('keydown', start);
+document.addEventListener('click', start);
 
 
 
