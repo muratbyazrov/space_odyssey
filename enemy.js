@@ -44,7 +44,6 @@ function enemyMiss(enemy) {
         enemyAppears(enemy);
     }, 2800);
 }
-//let enemyMainInt = setInterval(intCreateEnemy, 1000);
 
 
 

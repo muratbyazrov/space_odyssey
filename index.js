@@ -122,7 +122,7 @@ function killUser(bullet) {
 let enemyMainInt;
 let spaceObjMainInt;
 function start(event) {
-    if(event.keyCode == 13 && !START.classList.contains('yesStart')||event.target.classList.contains('control__button_fire')){
+    if((event.keyCode == 13||event.target.classList.contains('control__button_fire')) && !START.classList.contains('yesStart')){
         //это нужно, чтобы запустить таймеры только один раз
         START.classList.add('yesStart');
         //скроем начаьную страницу
