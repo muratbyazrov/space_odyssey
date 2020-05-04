@@ -4,6 +4,7 @@
 @import './start.css';
 @import './bullet.css';
 @import './enemy.css';
+@import './control.css';
 
 @keyframes radial-pulse {
     0% {

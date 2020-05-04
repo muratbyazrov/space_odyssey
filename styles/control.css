@@ -1,0 +1,28 @@
+.control{
+    display: none;
+}
+
+@media (max-width : 667px) and (max-height : 375px) {
+    .control{
+        display: flex;
+        width: 96%;
+        height: 20%;
+        position: fixed;
+        bottom: 7px;
+        z-index: 100;
+        color: cornsilk;
+        text-align: center;
+        font-size: 30px;
+    }
+    .control__button{
+        width: 15%;
+        height: 100%;
+        border: cornsilk solid;
+        margin: 0;
+        border-radius: 10px;
+        background-color: black;
+    }
+    .control__button_fire{
+        margin-left: auto;
+    }
+}

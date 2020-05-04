@@ -17,7 +17,7 @@ function initCoord(user, bullet) {
 
 //функция огонь
 function fire() {
-    if (!event.repeat && (event.keyCode == 32 || event.keyCode == 13)) {
+    if (!event.repeat && (event.keyCode == 32 || event.keyCode == 13) || event.target.classList.contains('control__button_fire')) {
         sounds(blaster);
         let bullet = createBullet();
         initCoord(userBox, bullet);
@@ -25,7 +25,7 @@ function fire() {
         //1 - сокрость повторов, 2 шаг, 3 - таймаут в сек
         move(bullet, 1, -6, 2);
         //здесь мы вычисляем время относительно высоты игрового поля
-        acsom(bullet, h / 15, -2);
+        acsom(bullet, h / 13, -2);
         //удалим тот объект, который дошёл до границы экрана
         removeObject(bullet);
         //уничтожение
@@ -115,4 +115,5 @@ function userLoose(bullet, interval) {
     }
 }
 
-document.addEventListener('keydown', fire)
+document.addEventListener('keydown', fire);
+document.addEventListener('click', fire)
