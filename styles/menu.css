@@ -64,3 +64,49 @@
     animation: radial-pulse 1s infinite;
 }
 
+@media (max-width : 720px) and (max-height : 400px) {
+    .game-menu{
+        width: 70px;
+        height: 70%;
+        position: absolute;
+        right: 2%;
+        top: 5%;
+        display: flex;
+        flex-direction: column;
+        color: cornsilk;
+        font-family: Chopsic;
+        z-index: 11;
+        opacity: 0.2;
+        font-size: 7px;
+    }
+    .game-menu_end{
+        font-size: 10px;
+        width: 30%;
+        height: 60%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 10px;
+        padding: 20px;
+        z-index: 12;
+        border: white solid;
+    }
+    .menu__block_mood{
+        width: 100%;
+        margin: 5px auto;
+        display: flex;
+    }
+    .menu__image{
+        width: 25px;
+        margin: 2px;
+        background-color: cornsilk;
+        border-radius: 50%;
+        margin: auto;
+    }
+    .menu__count{
+        font-size: 30px;
+        margin: auto;
+    }
+}
+
+

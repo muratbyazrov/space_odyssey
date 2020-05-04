@@ -1,7 +1,7 @@
 /* СТИЛЬ КОРАБЛЯ ПОЛЬЗОВАТЕЛЯ */
 .user-box {
-    width: 24%;
-    height: 29%;
+    width: 20%;
+    height: 25%;
     background-image: url('../images/new_ship/1.png');
     /* background-color: red; */
     background-size: contain;
