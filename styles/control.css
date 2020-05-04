@@ -2,7 +2,7 @@
     display: none;
 }
 
-@media (max-width : 667px) and (max-height : 375px) {
+@media (max-width : 850px) and (max-height : 500px) {
     .control{
         display: flex;
         width: 96%;
